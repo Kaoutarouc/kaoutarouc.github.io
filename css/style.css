@@ -428,3 +428,25 @@
 .testimonial-carousel .owl-dot.active::after {
     background: var(--primary);
 }
+
+
+/* Projects: same width/height ratio on desktop and mobile */
+.portfolio-img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+}
+
+.portfolio-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .portfolio-img {
+        aspect-ratio: 16 / 10;
+    }
+}
